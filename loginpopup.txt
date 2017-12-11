@@ -1,0 +1,13 @@
+<div id="login-box" class="login-popup">
+<img id="login_logo" src="http://www.lighthouseandgiant.co.uk/misc/keeper/graphics/kpr-login-logo.png" alt="Keeper logo" width="86px" height="77px" class="keeper_brand_login"/>
+<form method="post" class="signin"><input type="hidden" name="action" value="login">
+<fieldset class="textbox">
+<label class="username">
+<input id="username" name="username" value="" type="text" autocomplete="on" placeholder="username">
+</label>
+<input id="password" name="password" value="" type="password" placeholder="password">
+</label>
+<input class="submit button" type="submit" value="Log In">
+</fieldset>
+</form>
+</div>	

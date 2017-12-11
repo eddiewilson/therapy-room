@@ -1,0 +1,349 @@
+body {
+	background-color: #DAE2E8;
+	-webkit-font-smoothing:antialiased;
+	font-size: 100%;
+	color: #333333;
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+::selection {
+background: #339999; /* Safari */
+}
+::-moz-selection {
+background: #339999; /* Firefox */
+}
+ul{
+	padding:0;
+} 
+h1{
+	color: white;
+	font: 2.1em/1.2em 'Open Sans', sans-serif;
+	margin-bottom: 37px;
+	text-align: center;
+	float: left;
+	position: relative;
+	font-weight:100; 
+}
+h2 {
+	color: #339999;
+	font: 2.3em/1.2em 'Open Sans', sans-serif;
+	text-align: center;
+	float: left;
+	position: relative;
+	margin-bottom: 3.6%;
+	margin-top: 4.9%;
+	font-weight:200 ;
+}
+h3 {
+	margin-top: 0;
+	z-index: 999;
+}
+h4 {
+	margin-top: 0;
+	font: bold 1.4em/1em 'Open Sans', sans-serif;
+	margin-bottom: 2.6%;
+}
+h5 {
+	color: #339999;
+	text-transform: uppercase;
+	font: 1.1em/1em 'Open Sans', sans-serif;
+	margin-bottom: 13px;
+	line-height: 26px;
+}
+p{
+	font-size: 18px;
+	line-height: 25px;
+	margin-bottom: 18px;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+/****Section #1****/
+
+.logo {
+	margin-top: 4.3%;
+	
+}
+
+.nav {
+	float: right;
+	font-size: 1.3em;
+	margin-top: 7.6%;
+	line-height: 1.5em;
+	margin-bottom: 6%;
+}
+.nav ul{
+	text-align: center;
+}
+
+.nav ul li{
+	list-style: none outside none;
+	display: inline;
+}
+#nav1, #nav2, #nav3, #nav4{
+	margin-left: 2%;
+	margin-right: 2%;
+} 
+#nav5{
+	margin-right: 0%;
+} 
+.nav ul li a{
+	text-decoration: none;
+	color: white;
+}
+.nav ul li a:hover{
+	color: #ffffff;
+	text-decoration:underline;
+}
+#overlay{
+	position: absolute;
+	top:490px;
+	z-index: 2;
+	background-color: rgba(0,0,0,0.26);
+	width:50%;
+	margin-left: 5%;
+	color:white;
+	padding: 2%
+}
+	/****Section #2****/
+.intro {
+	margin-bottom: 3%;
+	white-space: pre-line;
+	font-size: 1.3em
+}
+section{
+	line-height: 1.4em;
+	display: inline-block;
+	margin-top: -0.3%;
+	white-space: pre-line;	
+}
+#map_canvas{
+	
+}
+#map_canvas img{
+	max-width: none !important;
+} 
+/****Section #3****/
+
+.team{
+	border-bottom: #d6d8dc solid 1px;
+	margin-bottom: 45px;
+	padding-bottom: 45px;
+	padding-top: 10px;
+}
+.teamtitle {
+	margin-bottom: 1.1%;
+}
+.team h2{
+	color: #339999;
+}
+.team span, .teamend span{
+	font: 0.6em/1em 'Open Sans', sans-serif;
+}
+
+.links{
+	margin-top:6.3%;
+	margin-bottom: 6.3%;
+}
+.links a{
+	text-decoration: none;
+	color: #333333;
+	text-decoration: underline;	
+}
+.links ul li{
+	list-style: none;
+}
+.links ul li a:hover{
+	color: #339999;
+}
+.prices{
+	margin-bottom: 6.5%;
+}
+.prices ul li{
+	list-style: none;
+}
+.availability ul li{
+	list-style: none;
+}
+/****Footer****/
+.foot{
+	line-height: 1.5em;
+}
+.foot a{
+	text-decoration: none;
+	color: #333333;
+}
+.foot a:hover{
+	color:#339999;
+}
+.foot h4{
+	margin-top:30px;
+	margin-bottom: 30px;
+}
+.foot ul li{
+	list-style: none;
+	margin-bottom: 5px;
+}
+.address{
+	margin-top: 30px
+}
+#footer_social{
+	margin-top: 20px
+}
+#credit{
+	text-align: center;
+	color: #333333;
+	font-size:12px;
+	margin:0 auto;
+	margin-top:60px;
+	width:320px;
+}
+#credit a:first-child{
+	text-decoration: none;
+	color: #333333;
+	cursor: default;
+	display: inline-block;
+}
+#credit a{
+	text-decoration: none;
+	color: #333333;
+	display: inline-block;
+}
+/**Google Maps**/
+#content h1{
+	font-size: 1em;
+}
+#bodyContent p{
+	font-size: 0.7em;
+}
+#one{
+	background-color: #339999;
+	color: white;
+	padding-bottom: 0px	
+}
+#two{
+	background-color: #dde8f1;
+	padding-bottom: 55px;
+}
+#three{
+	background-color: #DAE2E8;
+	line-height: 1.4em;
+	padding-bottom: 50px;
+}
+#four{
+	background-color: #DAE2E8;
+	padding-bottom: 35px;
+}
+#five{
+	background-color: #CAD1DB;
+	padding-bottom: 5%;
+	color: #333333;
+}
+
+/** Google Calendar **/
+.fc-widget-content{
+	height: 400px !important;
+}
+#calendar h2{
+	color: #339999;
+	font: 2.3em/1.2em 'Open Sans', sans-serif;
+	text-align: center;
+	float: left;
+	position: relative;
+	margin-bottom: 40px;
+	margin-top: 20px;
+	font-weight:200 ;
+}
+.fc-event{
+	background-color: transparent !important;
+	border: none !important;
+	color: #333333 !important;
+	text-transform: none;
+}
+.fc td{
+	border: none !important;
+}
+.fc th{
+	text-align: left !important;
+}
+.fc-row{
+	border-bottom: 1px solid #d6d8dc !important;
+	padding-bottom: 10px;
+	color: #33333;
+	text-transform: uppercase;
+	font: 1.1em/1em 'Open Sans', sans-serif;
+	margin-bottom: 13px;
+	line-height: 26px;
+}
+.fc-day-grid-container{
+	margin-top: 20px !important;
+}
+.fc-content{
+	
+}
+.fc-today{
+	background: none !important;
+}
+.fc-time{
+	float: left;
+	width: 100%;
+	font: 1em/1em 'Open Sans', sans-serif;
+	font-weight: 400 !important;
+	margin-bottom: 10px;
+	color: #339999;
+}
+.fc-title{
+	float: left;
+	border-bottom: 1px solid #d6d8dc;
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 18px;
+}
+/** End Google Calendar **/
+@media desktop, only sceen and (max-width :768px){
+	#pull{
+		display: none;
+	}
+}
+@media handheld, only screen and (max-width: 767px) {
+	.team-member{
+		border-bottom: #D6D8DC solid 1px;
+		margin-bottom: 45px;
+		padding-bottom: 45px;
+		padding-top: 10px;
+	}	
+}
+/** Iframes **/
+.video{
+	margin-top: 20px;
+}
+iframe{
+	width: 100%;
+	height: auto;
+	min-height: 309px;
+	margin-top: 5px; 
+}
+iframe#calendar{
+	height: 700px !important;
+} 
+
+.v-centered {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+  	-webkit-box-align: center;
+  	    -ms-flex-align: center;
+  	        align-items: center;
+	padding-top: 1rem;
+}
+.news{
+	background-color: #DAE2E8;
+	line-height: 1.4em;
+	padding-bottom: 50px;
+}

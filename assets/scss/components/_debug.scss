@@ -1,0 +1,31 @@
+body{
+    &:before{
+        font-family: 'futura', san-serif;
+        position: fixed;
+        bottom: ms(0);
+        left: ms(0);
+        background: rgba(black, 0.3);
+        color: white;
+        padding: ms(-2);
+        z-index: 100;
+        @include breakpoint(min-width $xs){
+            content: '📱 mobile';
+        }
+        @include breakpoint(min-width $sm){
+            content: '📱 mobile';
+            // content: '🔲 tablet-portrait';
+        }
+        @include breakpoint(min-width $md){
+            content: '◻️ tablet-landscape';
+        }
+        @include breakpoint(min-width $lg){
+            content: '💻 desktop';
+        }
+        @include breakpoint(min-width $xl){
+            content: '🖥️ big desktop';
+        }
+    }
+}
+.debug{
+    background-color: lightgrey;
+}

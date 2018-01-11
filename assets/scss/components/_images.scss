@@ -1,0 +1,17 @@
+img, svg{
+    max-width: 100%;
+    height: auto;
+}
+iframe{
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    margin: ms(1) auto;
+}
+.image-banner{
+    min-height: 600px;
+    background-size: 1440px;
+    background-repeat: no-repeat;
+    background-position-x: -270px;
+    background-position-y: -300px;
+}

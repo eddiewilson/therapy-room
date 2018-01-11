@@ -1220,7 +1220,7 @@ function Header(calendar, options) {
 				if (isOnlyButtons) {
 					groupChildren
 						.first().addClass(tm + '-corner-left').end()
-						.last().addClass(tm + '-corner-right').end();
+						.().addClass(tm + '-corner-right').end();
 				}
 
 				if (groupChildren.length > 1) {
@@ -2384,8 +2384,8 @@ function distributeHeight(els, availableHeight, shouldRedistribute) {
 	// *FLOORING NOTE*: we floor in certain places because zoom can give inaccurate floating-point dimensions,
 	// and it is better to be shorter than taller, to avoid creating unnecessary scrollbars.
 
-	var minOffset1 = Math.floor(availableHeight / els.length); // for non-last element
-	var minOffset2 = Math.floor(availableHeight - minOffset1 * (els.length - 1)); // for last element *FLOORING NOTE*
+	var minOffset1 = Math.floor(availableHeight / els.length); // for non- element
+	var minOffset2 = Math.floor(availableHeight - minOffset1 * (els.length - 1)); // for  element *FLOORING NOTE*
 	var flexEls = []; // elements that are allowed to expand. array of DOM nodes
 	var flexOffsets = []; // amount of vertical space it takes up
 	var flexHeights = []; // actual css height
@@ -2678,9 +2678,9 @@ function debounce(func, wait) {
 	var context;
 	var timestamp; // of most recent call
 	var later = function() {
-		var last = +new Date() - timestamp;
-		if (last < wait && last > 0) {
-			timeoutId = setTimeout(later, wait - last);
+		var  = +new Date() - timestamp;
+		if ( < wait &&  > 0) {
+			timeoutId = setTimeout(later, wait - );
 		}
 		else {
 			timeoutId = null;
@@ -3549,8 +3549,8 @@ function GridCoordMap(grid) {
 GridCoordMap.prototype = {
 
 	grid: null, // reference to the Grid
-	rows: null, // the top-to-bottom y coordinates. including the bottom of the last item
-	cols: null, // the left-to-right x coordinates. including the right of the last item
+	rows: null, // the top-to-bottom y coordinates. including the bottom of the  item
+	cols: null, // the left-to-right x coordinates. including the right of the  item
 
 	containerEl: null, // container element that all coordinates are constrained to. optionally assigned
 	minX: null,
@@ -5096,7 +5096,7 @@ $.extend(Grid.prototype, {
 				_this.triggerSegMouseout(seg, ev); // ensure a mouseout on the manipulated event has been reported
 				_this.isDraggingSeg = true;
 				view.hideEvent(event); // hide all event segments. our mouseFollower will take over
-				view.trigger('eventDragStart', el[0], event, ev, {}); // last argument is jqui dummy
+				view.trigger('eventDragStart', el[0], event, ev, {}); //  argument is jqui dummy
 			},
 			cellOver: function(cell, date) {
 				var origDate = seg.cellDate || dragListener.origDate;
@@ -5133,7 +5133,7 @@ $.extend(Grid.prototype, {
 					_this.isDraggingSeg = false;
 					view.destroyDrag();
 					view.showEvent(event);
-					view.trigger('eventDragStop', el[0], event, ev, {}); // last argument is jqui dummy
+					view.trigger('eventDragStop', el[0], event, ev, {}); //  argument is jqui dummy
 
 					if (hasChanged) {
 						view.eventDrop(el[0], event, newStart, ev); // will rerender all events...
@@ -5218,7 +5218,7 @@ $.extend(Grid.prototype, {
 			dragStart: function(ev) {
 				_this.triggerSegMouseout(seg, ev); // ensure a mouseout on the manipulated event has been reported
 				_this.isResizingSeg = true;
-				view.trigger('eventResizeStart', el[0], event, ev, {}); // last argument is jqui dummy
+				view.trigger('eventResizeStart', el[0], event, ev, {}); //  argument is jqui dummy
 			},
 			cellOver: function(cell, date) {
 				// compute the new end. don't allow it to go before the event's start
@@ -5252,7 +5252,7 @@ $.extend(Grid.prototype, {
 				_this.isResizingSeg = false;
 				destroy();
 				enableCursor();
-				view.trigger('eventResizeStop', el[0], event, ev, {}); // last argument is jqui dummy
+				view.trigger('eventResizeStop', el[0], event, ev, {}); //  argument is jqui dummy
 
 				if (newEnd) {
 					view.eventResize(el[0], event, newEnd, ev); // will rerender all events...
@@ -5434,7 +5434,7 @@ $.extend(Grid.prototype, {
 			start = normalRange.end;
 		}
 
-		// add the span of time after the last event (if there is any)
+		// add the span of time after the  event (if there is any)
 		if (start < viewEnd) { // compare millisecond time (skip any ambig logic)
 			inverseRanges.push({
 				event: event0,
@@ -5537,7 +5537,7 @@ $.extend(DayGrid.prototype, {
 
 	numbersVisible: false, // should render a row for day/week numbers? manually set by the view
 	cellDuration: moment.duration({ days: 1 }), // required for Grid.event.js. Each cell is always a single day
-	bottomCoordPadding: 0, // hack for extending the hit area for the last row of the coordinate grid
+	bottomCoordPadding: 0, // hack for extending the hit area for the  row of the coordinate grid
 
 	rowEls: null, // set of fake row elements
 	dayEls: null, // set of whole-day elements comprising the row's background
@@ -5642,7 +5642,7 @@ $.extend(DayGrid.prototype, {
 			p = [ n ];
 			rows[i] = p;
 		});
-		p[1] = n + e.outerHeight() + this.bottomCoordPadding; // hack to extend hit area of last row
+		p[1] = n + e.outerHeight() + this.bottomCoordPadding; // hack to extend hit area of  row
 	},
 
 
@@ -6217,7 +6217,7 @@ $.extend(DayGrid.prototype, {
 		var moreNodes = []; // array of "more" <a> links and <td> DOM nodes
 		var col = 0; // col #
 		var cell;
-		var levelSegs; // array of segment objects in the last allowable level, ordered left-to-right
+		var levelSegs; // array of segment objects in the  allowable level, ordered left-to-right
 		var cellMatrix; // a matrix (by level, then column) of all <td> jQuery elements in the row
 		var limitedNodes; // array of temporarily hidden level <tr> and segment <td> DOM nodes
 		var i, seg;
@@ -6252,7 +6252,7 @@ $.extend(DayGrid.prototype, {
 			limitedNodes = rowStruct.tbodyEl.children().slice(levelLimit) // get level <tr> elements past the limit
 				.addClass('fc-limited').get(); // hide elements and get a simple DOM-nodes array
 
-			// iterate though segments in the last allowable level
+			// iterate though segments in the  allowable level
 			for (i = 0; i < levelSegs.length; i++) {
 				seg = levelSegs[i];
 				emptyCellsUntil(seg.leftCol); // process empty cells before the segment
@@ -6518,7 +6518,7 @@ $.extend(TimeGrid.prototype, {
 	dayEls: null, // cells elements in the day-row background
 	slatEls: null, // elements running horizontally across all columns
 
-	slatTops: null, // an array of top positions, relative to the container. last item holds bottom of last slot
+	slatTops: null, // an array of top positions, relative to the container.  item holds bottom of  slot
 
 	helperEl: null, // cell skeleton element for rendering the mock event "helper"
 
@@ -6760,7 +6760,7 @@ $.extend(TimeGrid.prototype, {
 
 
 	// Queries each `slatEl` for its position relative to the grid's container and stores it in `slatTops`.
-	// Includes the the bottom of the last slat as the last item in the array.
+	// Includes the the bottom of the  slat as the  item in the array.
 	computeSlatTops: function() {
 		var tops = [];
 		var top;
@@ -6770,7 +6770,7 @@ $.extend(TimeGrid.prototype, {
 			tops.push(top);
 		});
 
-		tops.push(top + this.slatEls.last().outerHeight()); // bottom of the last slat
+		tops.push(top + this.slatEls.().outerHeight()); // bottom of the  slat
 
 		this.slatTops = tops;
 	},
@@ -7379,7 +7379,7 @@ View.prototype = {
 
 	// important Moments
 	start: null, // the date of the very first cell
-	end: null, // the date after the very last cell
+	end: null, // the date after the very  cell
 	intervalStart: null, // the start of the interval of time the view represents (1st of month for month view)
 	intervalEnd: null, // the exclusive end of the interval of time the view represents
 
@@ -8067,7 +8067,7 @@ function View(calendar) {
 		var day0 = t.start.day(); // first date's day of week
 		cellOffset += dayToCellMap[day0]; // normlize cellOffset to beginning-of-week
 		return Math.floor(cellOffset / cellsPerWeek) * 7 + // # of days from full weeks
-			cellToDayMap[ // # of days from partial last week
+			cellToDayMap[ // # of days from partial  week
 				(cellOffset % cellsPerWeek + cellsPerWeek) % cellsPerWeek // crazy math to handle negative cellOffsets
 			] -
 			day0; // adjustment for beginning-of-week normalization
@@ -8101,7 +8101,7 @@ function View(calendar) {
 		var day0 = t.start.day(); // first date's day of week
 		dayOffset += day0; // normalize dayOffset to beginning-of-week
 		return Math.floor(dayOffset / 7) * cellsPerWeek + // # of cells from full weeks
-			dayToCellMap[ // # of cells from partial last week
+			dayToCellMap[ // # of cells from partial  week
 				(dayOffset % 7 + 7) % 7 // crazy math to handle negative dayOffsets
 			] -
 			dayToCellMap[day0]; // adjustment for beginning-of-week normalization
@@ -8144,38 +8144,38 @@ function View(calendar) {
 		var rangeDayOffsetStart = dateToDayOffset(dayRange.start);
 		var rangeDayOffsetEnd = dateToDayOffset(dayRange.end); // an exclusive value
 
-		// first and last cell offset for the given date range
-		// "last" implies inclusivity
+		// first and  cell offset for the given date range
+		// "" implies inclusivity
 		var rangeCellOffsetFirst = dayOffsetToCellOffset(rangeDayOffsetStart);
-		var rangeCellOffsetLast = dayOffsetToCellOffset(rangeDayOffsetEnd) - 1;
+		var rangeCellOffset = dayOffsetToCellOffset(rangeDayOffsetEnd) - 1;
 
 		// loop through all the rows in the view
 		for (var row=0; row<rowCnt; row++) {
 
-			// first and last cell offset for the row
+			// first and  cell offset for the row
 			var rowCellOffsetFirst = row * colCnt;
-			var rowCellOffsetLast = rowCellOffsetFirst + colCnt - 1;
+			var rowCellOffset = rowCellOffsetFirst + colCnt - 1;
 
 			// get the segment's cell offsets by constraining the range's cell offsets to the bounds of the row
 			var segmentCellOffsetFirst = Math.max(rangeCellOffsetFirst, rowCellOffsetFirst);
-			var segmentCellOffsetLast = Math.min(rangeCellOffsetLast, rowCellOffsetLast);
+			var segmentCellOffset = Math.min(rangeCellOffset, rowCellOffset);
 
 			// make sure segment's offsets are valid and in view
-			if (segmentCellOffsetFirst <= segmentCellOffsetLast) {
+			if (segmentCellOffsetFirst <= segmentCellOffset) {
 
 				// translate to cells
 				var segmentCellFirst = cellOffsetToCell(segmentCellOffsetFirst);
-				var segmentCellLast = cellOffsetToCell(segmentCellOffsetLast);
+				var segmentCell = cellOffsetToCell(segmentCellOffset);
 
 				// view might be RTL, so order by leftmost column
-				var cols = [ segmentCellFirst.col, segmentCellLast.col ].sort();
+				var cols = [ segmentCellFirst.col, segmentCell.col ].sort();
 
-				// Determine if segment's first/last cell is the beginning/end of the date range.
+				// Determine if segment's first/ cell is the beginning/end of the date range.
 				// We need to compare "day offset" because "cell offsets" are often ambiguous and
 				// can translate to multiple days, and an edge case reveals itself when we the
 				// range's first cell is hidden (we don't want isStart to be true).
 				var isStart = cellOffsetToDayOffset(segmentCellOffsetFirst) == rangeDayOffsetStart;
-				var isEnd = cellOffsetToDayOffset(segmentCellOffsetLast) + 1 == rangeDayOffsetEnd;
+				var isEnd = cellOffsetToDayOffset(segmentCellOffset) + 1 == rangeDayOffsetEnd;
 				                                                   // +1 for comparing exclusively
 
 				segments.push({
@@ -8621,9 +8621,9 @@ $.extend(MonthView.prototype, {
 		this.start = this.skipHiddenDays(this.start); // move past the first invisible days of the week
 
 		this.end = this.intervalEnd.clone();
-		this.end = this.skipHiddenDays(this.end, -1, true); // move in from the last week if no visible days
+		this.end = this.skipHiddenDays(this.end, -1, true); // move in from the  week if no visible days
 		this.end.add((7 - this.end.weekday()) % 7, 'days'); // move to end of week if not already
-		this.end = this.skipHiddenDays(this.end, -1, true); // move in from the last invisible days of the week
+		this.end = this.skipHiddenDays(this.end, -1, true); // move in from the  invisible days of the week
 
 		rowCnt = Math.ceil( // need to ceil in case there are hidden days
 			this.end.diff(this.start, 'weeks', true) // returnfloat=true

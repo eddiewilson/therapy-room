@@ -20,7 +20,7 @@ margin: 0 auto;
 overflow: hidden;
 }
 
-.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .col-6, .sevencol, .col-8, .ninecol, .tencol, .elevencol {
 margin-right: 3.8%;
 float: left;
 min-height: 1px;
@@ -38,7 +38,7 @@ width: 13.45%;
 width: 22.05%;
 }
 
-.row .fourcol {
+.row .col-4{
 width: 30.75%;
 }
 
@@ -46,7 +46,7 @@ width: 30.75%;
 width: 39.45%;
 }
 
-.row .sixcol {
+.row .col-6 {
 width: 48%;
 }
 
@@ -54,7 +54,7 @@ width: 48%;
 width: 56.75%;
 }
 
-.row .eightcol {
+.row .col-8 {
 width: 65.4%;
 }
 
@@ -70,12 +70,12 @@ width: 82.7%;
 width: 91.35%;
 }
 
-.row .twelvecol {
+.row .col-12 {
 width: 100%;
 float: left;
 }
 
-.last {
+. {
 margin-right: 0px;
 }
 
@@ -118,7 +118,7 @@ img {
 	padding-right: 0px;
 	}
 	
-	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .col-6, .row .sevencol, .row .col-8, .row .ninecol, .row .tencol, .row .elevencol, .row .col-12 {
 	width: auto;
 	float: none;
 	margin-left: 0px;

@@ -1,64 +1,28 @@
-<?php ?>
-<!doctype html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8" />
-	<title>Complementary Therapies in Bodmin, Cornwall. The Therapy Room Bodmin</title>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-	<meta name="keywords" content="chiropody, chiropody cornwall, chiropodists cornwall, reflexology, reflexology cornwall, reflexologists cornwall, bowen technique, foot health professional, aromatherapy, cornwall, bodmin, hilary hignell" >
-	<meta name="description" content="The Therapy Room Bodmin provides a range of complementary therapies to aid a number of aliments specialising in reflexology and chiropody.">
-	
-	
-	<!-- 1140px Grid styles for IE -->
-	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
-
-	<!-- The 1140px Grid -->
-	<link rel="stylesheet" href='./assets/1140.css' type="text/css" media="screen" />
-	
-	<!-- Your styles -->
-	<link rel="stylesheet" href='./assets/therapy.css' type="text/css">
-		
-	<!-- Fonts-->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700' rel='stylesheet' type='text/css'>
-	
-	<link href='./assets/fullcalendar.css' rel='stylesheet' />
-	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	
-	
-
-</head>
-
-
-<body onload="initialize()">
-	<div id="one">
-		<div class="container">
-			<div class="row">
-				<div class="fourcol logo">
-					<img src="assets/logo.png" alt="therapy room logo" />
-				</div>
-				<div class="eightcol last nav">
-					<ul>
-						<li id="nav1"><a id="section-one" href="#one">Home</a></li>
-						<li id="nav2"><a id="section-two" href="#two">Find Us</a></li>
-						<li id="nav3"><a id="section-three" href="#three">Meet The Team</a></li>
-						<li id="nav4"><a id="section-four" href="#four">Calendar</a></li>
-						<li id="nav5"><a id="section-five" href="#five">Contact Us</a></li>
-					</ul>
-				</div>
+<header class="container-fluid bg-clr_white p-top_ms3 p-bottom_ms4 section-h_60 header">
+	<div class="content-wrapper">
+		<div class="row align-items-center">
+			<div class="col-6 col-md-2 logo">
+				<img src="./dist/img/icons/intermediate/logo-mint-full.svg" alt="therapy room logo" />
 			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="twelvecol intro">
-					<h1>Welcome to The Therapy Room</h1>
-					<article>
-						<section><p>We provide a range of complementary therapies to help improve your health and well being</p></section>
-					</article>
-				</div>
-			</div>
+			<button class="menu-btn btn_inverse btn col-2 d-none d-sm-block d-md-none d-flex bg-clr_transparent offset-4 offset-md-0 justify-content-end">
+				<svg fill="#FFF" height="35" viewBox="0 0 24 24" width="35" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+			</button>
+			<nav class="col-12 col-md-10 nav">
+				<ul class="justify-content-end w-100 d-md-flex">
+					<li id="nav1" class="col-auto"><a class="font-size_ms-1 text-md-right text-center d-block m-bottom_ms0 m-top_ms0 clr_abbey text-uppercase font-weight-light letterspacing" id="section-one" href="#one">Home</a></li>
+					<li id="nav2" class="col-auto"><a class="font-size_ms-1 text-md-right text-center d-block m-bottom_ms0 m-top_ms0 clr_abbey text-uppercase font-weight-light letterspacing" id="section-two" href="#two">Find Us</a></li>
+					<li id="nav3" class="col-auto"><a class="font-size_ms-1 text-md-right text-center d-block m-bottom_ms0 m-top_ms0 clr_abbey text-uppercase font-weight-light letterspacing" id="section-three" href="#three">Meet The Team</a></li>
+					<li id="nav4" class="col-auto"><a class="font-size_ms-1 text-md-right text-center d-block m-bottom_ms0 m-top_ms0 clr_abbey text-uppercase font-weight-light letterspacing" id="section-four" href="#four">Calendar</a></li>
+					<li id="nav5" class="col-auto"><a class="font-size_ms-1 text-md-right text-center d-block m-bottom_ms0 m-top_ms0 clr_abbey text-uppercase font-weight-light letterspacing" id="section-five" href="#five">Contact Us</a></li>
+				</ul>
+			</nav>
 		</div>
 	</div>
+	<div class="content-wrapper d-flex flex-column justify-content-end m-top_ms5">
+    	<div class="offset-md-1">
+			<div class="">
+				<h1 class="font-size_ms7 font_display clr_persian-green font-weight-semi-bold">We provide a range of complementary therapies <br/> to help improve your health <br/> &amp; well being.</h1>
+			</div>
+		</div>
+	</div>	
+</header>

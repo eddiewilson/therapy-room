@@ -1,0 +1,66 @@
+.bg-color_teal{
+    background: $teal;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, darken($primary,5%), $primary);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, darken($primary,5%), $primary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    // background: #A1FFCE;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, $primary, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to right, $primary, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.bg-clr_persian-green{
+    background-color: $persian_green;
+}
+.clr_persian-green{
+    color: $persian_green;
+}
+.bg-color_complexion{
+    background-color: $just_right;
+}
+.bg-clr_cameo{
+    background-color: $cameo;
+}
+.bg-clr_frosted_mint{
+    background-color: $frosted_mint;
+}
+.clr_frosted_mint{
+    color: $frosted_mint;
+}
+.bg-clr_abbey{
+    background-color: $abbey;
+}
+.bg-clr_transparent{
+    background-color: transparent;
+}
+.bg-clr_white{
+    background-color: white;
+}
+.bg-clr_tan{
+    background-color: $tan;
+}
+.clr_abbey{
+    color: $abbey;
+}
+.clr_white{
+    color: $white;
+}
+.clr_tan{
+    color: $tan;
+}
+.clr_text-dark{
+    color: $text_dark;
+}
+.clr_text{
+    color: $text;
+}
+.clr_text-light{
+    color: $text_light;
+}
+.clr_text-lighter{
+    color: $text_lighter;
+}
+.clr_text-lightest{
+    color: $text_lightest;
+}
+.clr_teal{
+    color: $teal;
+}

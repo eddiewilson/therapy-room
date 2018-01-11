@@ -1,0 +1,48 @@
+// Variables
+
+$teal: #86d886;
+
+$just_right: #ECCCBB;
+$desert_sand: #EED0B5;
+$complexion: #E8CAAE;
+$cameo: #E0B7A5;
+$vanilla: #D1B9A3;
+$limed_oak: #A47751;
+$tan: #8F633B;
+$dallas: #7B4F2A;
+$jambalaya: #613712;
+
+$frosted_mint: #D8FFEF;
+$drover: #F3FCB1;
+$persian_green: #00AD84;
+
+$abbey: #474B50;
+$silver: #C5C5C5;
+$iron: #D6DBDD;
+$black_haze: #E8ECEB;
+$aqua_haze: #F5F9F8;
+$catskill_white: #F6FBFB;
+
+$white: white;
+$text: $abbey;
+$text_light: $silver;
+$text_lighter: $iron;
+$text_lightest: $black_haze;
+$text_dark: darken($text, 5%);
+
+// Media
+
+$xs: 0;
+$sm:  36rem; //576px;
+$md:  48rem; //768px;
+$lg:  62rem; //992px;
+$xl:  775 rem; //1200px;
+
+// Grid
+
+$grid-columns: 12;
+$grid-gutter-width: 40px;
+
+@mixin smooth($dur){
+	transition: all $dur ease-in-out 0s;
+}

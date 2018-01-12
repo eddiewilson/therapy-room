@@ -13,9 +13,9 @@
 	
 	<!-- 1140px Grid styles for IE -->
 	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
-	<link rel="stylesheet" href='style.css' type="text/css">
+	<link rel="stylesheet" href='css/style.css' type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"> 
-	<link href='./assets/fullcalendar.css' rel='stylesheet' />
+	<link href='css/assets/fullcalendar.css' rel='stylesheet' />
 	
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -26,7 +26,7 @@
 
 <body>
 	<div class="svgSpriteWrapper d-none invisible">
-    	<?php include_once('dist/img/icons/symbol/svg/sprite.symbol.svg'); ?>
+    	<?php include_once('/img/icons/symbol/svg/sprite.symbol.svg'); ?>
     </div>
 	<?php include('header.php'); ?>
 	<?php include('section-map.php'); ?>

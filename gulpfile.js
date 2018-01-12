@@ -29,7 +29,7 @@ gulp.task('serve', ['sass'], function() {
         proxy: "localhost"
     });
     gulp.watch("assets/scss/**/*.scss", ['sass']);
-    gulp.watch("index.php").on('change', browserSync.reload);
+    gulp.watch("build/index.php").on('change', browserSync.reload);
 });
 
 // Compile Our Sass
@@ -42,7 +42,7 @@ gulp.task('sass', function() {
     		]) 
     	)
     .pipe(cssnano())
-    .pipe(gulp.dest(''))
+    .pipe(gulp.dest('build/css'))
     .pipe(browserSync.stream());
 });
 
@@ -79,7 +79,7 @@ var svgConfig = {
 gulp.task('svg', function() {
     gulp.src('assets/img/icons/*.svg')
     .pipe(svgSprite(svgConfig))
-    .pipe(gulp.dest('dist/img/icons'));
+    .pipe(gulp.dest('build/img/icons'));
 });
 
 // ES6 & Concatenate & Minify JS
@@ -93,7 +93,7 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('dist'))
         .pipe(rename('all.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('build/js'));
 });
 
 // Watch Files For Changes

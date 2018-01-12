@@ -2,7 +2,7 @@
 	<div class="content-wrapper">
 		<div class="row align-items-center">
 			<div class="col-6 col-md-2 logo">
-				<img src="./dist/img/icons/intermediate/logo-mint-full.svg" alt="therapy room logo" />
+				<img src="./img/icons/intermediate/logo-mint-full.svg" alt="therapy room logo" />
 			</div>
 			<button class="menu-btn btn_inverse btn col-2 d-none d-sm-block d-md-none d-flex bg-clr_transparent offset-4 offset-md-0 justify-content-end">
 				<svg fill="#FFF" height="35" viewBox="0 0 24 24" width="35" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>

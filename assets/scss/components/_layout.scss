@@ -55,3 +55,15 @@
         min-height: 100vh;
     }
 }
+.list-group{
+    .list-group-item{
+        padding: ms(-1) ms(2) ms(-2) ms(2);
+        border-radius: 0px;
+        border-left: none;
+        border-right: none;
+        &:empty{
+            background-color: $catskill_white;
+            min-height: ms(8) + 2px;
+        }
+    }
+}

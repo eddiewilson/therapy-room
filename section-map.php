@@ -9,7 +9,7 @@
 					<li>01208 76009</li>
 					<li class="m-top_ms1">
 						<ul class="d-flex align-items-space-around">
-							<li class=""><a href=""><img src="./dist/img/icons/intermediate/facebook-white.svg"/></a></li>
+							<li class="m-right_ms3"><a href=""><img src="./dist/img/icons/intermediate/facebook-white.svg"/></a></li>
 							<li class=""><a href=""><img src="./dist/img/icons/intermediate/google-white.svg"/></a></li
 						></ul>
 					</li>

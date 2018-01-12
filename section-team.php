@@ -8,8 +8,9 @@
         $i = 1;
         foreach($json as $objects => $user) { 
              ?>
-             <article class="row col-12 col-md-11 offset-md-1 m-bottom_ms4" style="background-color: <?= $user->Colour; ?>">
-                <span class="col-md-1 m-right_ms1 m-top_ms0">
+             <article class="col-12 col-md-11 offset-md-1 m-bottom_ms4" style="background-color: <?= $user->Colour; ?>">
+             <div class="row">   
+             <span class="col-md-1 m-right_ms1 m-top_ms0">
                     <span class="d-flex text_hoop align-items-center justify-content-center">
                         <i class="font_display clr_teal font-size_ms-1"><?= $i++?></i>
                     </span>
@@ -65,6 +66,58 @@
                     } 
                     echo '</ul>';
                 ?>
+                </div>
+                </div>
+                <div class="row no-gutters m-top_ms3 justify-content-center">
+                    <div class="col-4">
+                <?php 
+                echo '<ul class="list-group">';
+                echo '<li class="list-group-item text-right">Therapy</li>';
+                    if(!empty($user->Prices)){
+                        // var_dump($user->Prices);
+                        foreach($user->Prices as $index){
+                            if(empty($index->Therapy)){
+                                echo '<li></li>';
+                            }
+                            echo  '<li class="list-group-item text-right">' . $index->Therapy  . '</li>';  
+                        } 
+                    } 
+                    echo '</ul>';
+                ?>
+                </div>
+                <div class="col-2">
+                    <?php 
+                        echo '<ul class="list-group">';
+                        echo '<li class="list-group-item">Duration</li>';
+                            if(!empty($user->Prices)){
+                            // var_dump($user->Prices);
+                                foreach($user->Prices as $index){ 
+                                    if(empty($index->Duration)){
+                                        echo '<li></li>';
+                                    }
+                                    echo  '<li class="list-group-item">' . $index->Duration  . '</li>'; 
+                                } 
+                            } 
+                        echo '</ul>';
+                    ?>
+                </div>
+                <div class="col-2">
+                    <?php 
+                        echo '<ul class="list-group">';
+                        echo '<li class="list-group-item">Price</li>';
+                            if(!empty($user->Prices)){
+                            // var_dump($user->Prices);
+                                foreach($user->Prices as $index){ 
+                                    if(empty($index->Price)){
+                                        echo '<li></li>';
+                                    }
+                                    echo  '<li class="list-group-item">&pound; ' . $index->Price  . '</li>'; 
+                                } 
+                            } 
+                        echo '</ul>';
+                    ?>
+                </div>
+                
                 </div>
             </article>
             <?php 
